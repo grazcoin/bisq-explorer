@@ -114,12 +114,12 @@ bsq_globals.stats_dict['Existing amount']=bsq_globals.stats_dict['Minted amount'
 bsq_globals.stats_dict['Addresses']=len(bsq_globals.addr_dict.keys())
 
 # TODO not provided yet in jsons (though in app available)
-bsq_globals.stats_dict['Price']=0.001234
-bsq_globals.stats_dict['Marketcap']=bsq_globals.stats_dict['Price']*bsq_globals.stats_dict['Existing amount']
+bsq_globals.stats_dict['Price in BSQ/BTC']=0.00015
+bsq_globals.stats_dict['Marketcap in BTC']=bsq_globals.stats_dict['Price in BSQ/BTC']*bsq_globals.stats_dict['Existing amount']
 
 
 stats_json=[]
-for k in ["Existing amount", "Minted amount", "Burnt amount", "Addresses", "Unspent TXOs", "Spent TXOs", "Price", "Marketcap"]:
+for k in ["Existing amount", "Minted amount", "Burnt amount", "Addresses", "Unspent TXOs", "Spent TXOs", "Price in BSQ/BTC", "Marketcap in BTC"]:
     stats_json.append({"name":k, "value":bsq_globals.stats_dict[k]})
 
 atomic_json_dump(stats_json,'www/general/stats.json', add_brackets=False)
