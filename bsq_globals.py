@@ -34,8 +34,8 @@ def init():
             "Addresses":0,
             "Unspent TXOs":0,
             "Spent TXOs":0,
-            "Price":0,
-            "Marketcap":0}
+            "Price in BSQ/BTC":0,
+            "Marketcap in BTC":0}
     chaintate_dict={}
     d=False
 
